@@ -10,4 +10,6 @@ LƯU Ý
 
 - Một số đoạn code trong repo này có thể không tương thích với một số phiên bản MATLAB cũ hơn.
 
+- Các đoạn string trong các lênh print, input, error,... nếu ra những ký tự rác thì chuyển chúng về dạng không dấu.
+
 - Tất cả các đoạn code chỉ DÙNG ĐỂ THAM KHẢO, KHÔNG DÙNG ĐỂ SAO CHÉP.
