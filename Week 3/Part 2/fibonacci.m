@@ -1,7 +1,13 @@
 function F = fibonacci(n)
-    if (or(n == 1, n == 2))
-        F = 1;
-    else
-        F = fibonacci(n - 1) + fibonacci(n - 2);
+    a = 0;
+    b = 1;
+    if (n == 0)
+        F = a;
     end
+    for i = 2:n
+        c = a + b;
+        a = b;
+        b = c;
+    end
+    F = b;
 end
