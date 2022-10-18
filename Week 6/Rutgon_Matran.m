@@ -1,17 +1,24 @@
 function A_rg = Rutgon_Matran(A)
-    for j = 2 : size(A, 1)
-        for i = j : size(A, 1)
-            S = 0;
-            for k = 1 : size(A, 2)
-                if A(i, k) == 0
-                    S = S + 1;
+    A_rg = A;
+    s = size(A_rg, 1);
+    sw = 0;
+    for i = 1:s
+        if A_rg(i, i) == 0
+            for j = 1:s
+                if A_rg(j, i) ~= 0
+                    sw = j;
                 end
             end
-            if S ~= size(A, 2)
-                m = -A(i, j - 1)/A(j - 1, j - 1);
-                A(i, :) = A(i, :) + m*A(j - 1, :);
+            temp_row = A_rg(sw, :);
+            A_rg(sw, :) = A_rg(i, :);
+            A_rg(i, :) = temp_row;
+        end
+        
+        A_rg(i, :) = A_rg(i, :) / A_rg(i, i);
+        for j = 1:s
+            if i ~= j
+                A_rg(j, :) = A_rg(j, :) - A_rg(i, :) * A_rg(j, i);
             end
         end
     end
-    A_rg = A;
 end
