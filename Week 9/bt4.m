@@ -1,11 +1,18 @@
-figure('Name', 'Bài tập 4a', 'NumberTitle', 'off')
+clc;
+clear all;
+close all;
+
+figure('Name', 'Bai tap 4a', 'NumberTitle', 'off')
 A = [1; 3];
 B = [-3; 5];
 C = [2; -4];
 D = [-1; -3];
 O = [0; 0];
 plot(A(1), A(2), 'ro', B(1), B(2), 'bs', C(1), C(2), 'm<', D(1), D(2), 'y>', O(1), O(2), 'kd');
-figure('Name', 'Bài tập 4b', 'NumberTitle', 'off')
+axis([-10 10 -10 10]);
+
+
+figure('Name', 'Bai tap 4b', 'NumberTitle', 'off')
 X1 = [A B];
 X2 = [O C];
 X3 = [D B];
@@ -16,7 +23,9 @@ line(X2(1 ,:), X2(2 , :), 'LineWidth', 2);
 line(X3(1 ,:), X3(2 , :), 'LineWidth', 2);
 line(X4(1 ,:), X4(2 , :), 'LineWidth', 2);
 line(X5(1 ,:), X5(2 , :), 'LineWidth', 2);
-figure('Name', 'Bài tập 4c', 'NumberTitle', 'off')
+
+
+figure('Name', 'Bai tap 4c', 'NumberTitle', 'off')
 Y1 = [A B C A];
 Y2 = [A B D A];
 Y3 = [A C D A];

@@ -1,6 +1,10 @@
+clc;
+clear all;
+close all;
+
 syms x y;
 
-figure('Name', 'Bài tập 5a', 'NumberTitle', 'off')
+figure('Name', 'Bai tap 5a', 'NumberTitle', 'off')
 f1a = 2*x^2;
 fplot(@(t) 2*t.^2);
 hold on;
@@ -17,12 +21,12 @@ for i = 1:n1
 end
 xlabel('x')
 ylabel('y')
-legend(string(f1a), string(f2a), 'Giao điểm')
+legend(string(f1a), string(f2a), 'Giao diem')
 A1 = int(abs(int(1, y, f1a, f2a)), x, min(X1), max(X1));
-fprintf('Diện tích của miền nằm giữa 2 đồ thị %s và %s là: %f\n',...
+fprintf('Diện tich cua mien nam giua hai do thi %s va %s la: %f\n',...
     string(f1a), string(f2a), A1);
 
-figure('Name', 'Bài tập 5b', 'NumberTitle', 'off')
+figure('Name', 'Bai tap 5b', 'NumberTitle', 'off')
 f1b = 2*x;
 fplot(@(t) 2*t);
 hold on;
@@ -39,12 +43,12 @@ for i = 1:n2
 end
 xlabel('x')
 ylabel('y')
-legend(string(f1b), string(f2b), 'Giao điểm')
+legend(string(f1b), string(f2b), 'Giao diem')
 A2 = int(abs(int(1, y, f1b, f2b)), x, min(X2), max(X2));
-fprintf('Diện tích của miền nằm giữa 2 đồ thị %s và %s là: %f\n',...
+fprintf('Dien tich cua mien nam giua hai do thi %s va %s la: %f\n',...
     string(f1b), string(f2b), A2);
 
-figure('Name', 'Bài tập 5c', 'NumberTitle', 'off')
+figure('Name', 'Bai tap 5c', 'NumberTitle', 'off')
 f1c = x - 1 - y;
 fimplicit(@(u, v) u - 1 - v)
 hold on;
@@ -62,12 +66,12 @@ for i = 1:n3
 end
 xlabel('x')
 ylabel('y')
-legend(string(f1c), string(f2c), 'Giao điểm')
+legend(string(f1c), string(f2c), 'Giao diem')
 A3 = int(abs(int(1, x, y + 1, (y^2 - 6)/2)), y, min(Y3), max(Y3)); 
-fprintf('Diện tích của miền nằm giữa 2 đồ thị %s và %s là: %f\n',...
+fprintf('Dien tich cua mien nam giua 2 đồ thị %s và %s la: %f\n',...
     string(f1c), string(f2c), A3);
 
-figure('Name', 'Bài tập 5d', 'NumberTitle', 'off')
+figure('Name', 'Bai tap 5d', 'NumberTitle', 'off')
 f1d = x;
 fplot(@(t) t);
 hold on;
@@ -84,12 +88,12 @@ for i = 1:n4
     plot(X4(i), Y4, 'o', 'MarkerFaceColor', 'black')
     hold on;
 end
-legend(string(f1d), string(f2d), 'Giao điểm')
+legend(string(f1d), string(f2d), 'Giao diem')
 A4 = int(abs(int(1, y, x, x^3)), x, min(X4), max(X4));
-fprintf('Diện tích của miền nằm giữa 2 đồ thị %s và %s là: %f\n',...
+fprintf('Dien tich cua mien nam giua hai do thi %s va %s la: %f\n',...
     string(f1d), string(f2d), A4);
 
-figure('Name', 'Bài tập 5e', 'NumberTitle', 'off')
+figure('Name', 'Bai tap 5e', 'NumberTitle', 'off')
 f1e = y - x + 2;
 fimplicit(@(u, v) v - u + 2);
 hold on;
@@ -107,7 +111,7 @@ for i = 1:n5
 end
 xlabel('x')
 ylabel('y')
-legend(string(f1e), string(f2e), 'Giao điểm')
+legend(string(f1e), string(f2e), 'Giao diem')
 A5 = int(abs(int(1, x, y + 2, y^2)), y, min(Y5), max(Y5));
-fprintf('Diện tích của miền nằm giữa 2 đồ thị %s và %s là: %f\n',...
+fprintf('Dien tich cua mien nam giua hai do thi %s va %s la: %f\n',...
     string(f1e), string(f2e), A5);

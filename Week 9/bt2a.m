@@ -1,3 +1,7 @@
+clc;
+clear all;
+close all;
+
 A = [1 -2 3;...
     -1 3 0;...
     2 -5 5];
@@ -6,5 +10,5 @@ A_exp = [A b];
 R = rref(A_exp);
 disp(R)
 x = R(:,end);
-disp('Nghiệm của hệ phương trình là ');
+disp('Nghiem cua he phuong trinh la ');
 disp(x)

@@ -1,4 +1,4 @@
-figure('Name', 'Bài tập 3a', 'NumberTitle', 'off')
+figure('Name', 'Bai tap 3a', 'NumberTitle', 'off')
 syms x k;
 x1 = linspace(-2 * pi, 2 * pi);
 f1 = x1 .* sin(x1);

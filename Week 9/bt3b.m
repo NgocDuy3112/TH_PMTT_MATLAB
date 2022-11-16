@@ -1,4 +1,4 @@
-figure('Name', 'Bài tập 3b', 'NumberTitle', 'off')
+figure('Name', 'Bai tap 3b', 'NumberTitle', 'off')
 t1 = linspace(-20, 20, 500);
 x2 = linspace(-100, 100);
 x1 = 5 * (cos(t1) + t1.* sin(t1));
@@ -32,6 +32,7 @@ for i = -20 : 3 : 17
         j = j + 1;
     end
 end
+
 A = sort(A);
 B = sort(B);
 for k = 0 : j - 2
